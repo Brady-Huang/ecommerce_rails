@@ -6,13 +6,10 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-const images = require.context('../images', true)
-const imagePath = (name) => images(name, true)
-
 import "controllers";
 
 import "styles/shared";
-import "styles/frontend";
+import "styles/backend";
 
 import "scripts/shared";
-import "scripts/frontend";
+import "scripts/backend";
