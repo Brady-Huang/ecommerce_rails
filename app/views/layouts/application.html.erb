@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>RailsEcommerce</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbolinks-cache-control" content="no-cache">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,6 +12,10 @@
 
   <body>
     <%= render 'shared/frontend/navbar' %>
+    <%= render 'shared/frontend/top_menu' %>
     <%= yield %>
+    <%= render 'shared/frontend/footer' %>
+    
+    
   </body>
 </html>
