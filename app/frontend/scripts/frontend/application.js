@@ -12,4 +12,6 @@ document.addEventListener('turbolinks:load', () => {
         });
     }
     
-  });
+});
+
+
