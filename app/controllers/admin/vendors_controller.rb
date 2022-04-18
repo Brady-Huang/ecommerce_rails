@@ -5,7 +5,7 @@ class Admin::VendorsController < Admin::BaseController
   end
 
   def new
-    @vendor = Vendor.new 
+    @vendor = Vendor.new
   end
 
   def create
