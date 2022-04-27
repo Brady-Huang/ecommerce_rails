@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   before_action :find_category, unless: :backend?
+  helper_method :current_cart
 
   private
 
@@ -15,5 +16,9 @@ class ApplicationController < ActionController::Base
 
   def find_category
     @categories = Category.order(position: :asc)
+  end
+
+  def current_cart
+    @cart922 ||= Cart.from_hash(session[:cart_922])
   end
 end

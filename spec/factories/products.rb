@@ -1,11 +1,19 @@
 FactoryBot.define do
   factory :product do
-    name { "MyString" }
-    vender { nil }
-    list_price { "9.99" }
-    sell_price { "9.99" }
+    name { Faker::Name.name }
+    list_price { Faker::Number.between(from: 10, to: 50) }
+    sell_price { Faker::Number.between(from: 1, to: 50) }
     on_sell { false }
-    code { "MyString" }
-    deleted_at { "2022-04-07 15:38:08" }
+
+    vendor
+    category
+
+    trait :with_skus do
+      transient do
+        amount { 2 }
+      end
+
+      skus { build_list :sku, amount }
+    end
   end
 end

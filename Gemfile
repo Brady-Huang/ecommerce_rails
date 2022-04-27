@@ -31,6 +31,7 @@ gem 'figaro', '~> 1.0'
 gem 'paranoia', '~> 2.4', '>= 2.4.2'
 gem 'friendly_id', '~> 5.3'
 gem 'acts_as_list', '~> 0.7.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -59,10 +60,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
-  gem 'foreman', '~> 0.87.1'
+  gem 'foreman', '~> 0.87.2'
   gem 'hirb-unicode', '~> 0.0.5'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '~> 5.1', '>= 5.1.1'
   gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
   gem 'faker', '~> 2.11'
   gem 'pry-rails', '~> 0.3.9'
+  gem 'database_cleaner', '~> 1.8', '>= 1.8.2'
 end
